@@ -1,0 +1,12 @@
+
+.custom-form{
+    width: 90%;
+}
+
+
+.form--footer{
+    width: 220px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}

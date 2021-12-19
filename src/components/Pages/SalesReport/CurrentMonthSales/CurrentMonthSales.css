@@ -1,0 +1,26 @@
+
+.data-table tr .action {
+    width: 120px;
+}
+.add--btn{
+    float: none;
+    margin-right: none;
+    width: fit-content;
+    padding:6px 15px;
+
+}
+.sale--btn{
+    display: inline-block;
+    padding:6px 15px;
+    border-radius:3px;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    text-decoration:none;
+    border: none;
+
+}
+.delete--btn{
+    margin-left: 8px;
+}

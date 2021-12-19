@@ -1,0 +1,22 @@
+.modal{
+    width: 60vw;
+    min-height: 30vh;
+    max-height: 80vh;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #000;
+    z-index: 70000000000;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transition: all ease 0.4s;
+    -webkit-transition: all ease 0.4s;
+    -moz-transition: all ease 0.4s;
+    -ms-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow-y: scroll;
+}

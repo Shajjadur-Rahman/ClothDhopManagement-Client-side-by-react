@@ -1,0 +1,26 @@
+.sale-product-page-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-end;
+    padding: 10px;
+    padding-top: 30px;
+}
+.sale-product-page-header .product__image{
+    width: 210px;
+    height: 210px;
+}
+.sale-product-page-header .product__image img{
+    width: 100%;
+    height: 100%;
+}
+.sale-product-page-header .product-content-header{
+    padding-left: 40px;
+}
+.input__length{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input__length input{
+    margin: 0 2px;
+}

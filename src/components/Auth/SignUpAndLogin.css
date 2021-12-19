@@ -1,0 +1,159 @@
+.auth-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -6%;
+
+    
+}
+.auth-form-container {
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 5px 10px #000;
+    z-index: 6000000000000;
+
+}
+.auth-form .form-image{
+    width: 50%; 
+    height: 100%;
+
+}
+.auth-form .form-image img{
+    width: 100%;
+    height: 100%;
+    
+}
+.form .form__fields{
+    padding: 20px;
+}
+.confirm-submittion{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #d7aeee , #8ee6e6, #d981cf);
+}
+.confirm-submittion h3{
+    width: 90%;
+    height: auto;
+}
+.auth-form .form {
+	width: 50%;
+	height: 100%;
+	background-image: linear-gradient(to right, #d7aeee , #8ee6e6, #d981cf);
+}
+.form .form__fields .form-header h2{
+    font-size: 28px;
+    color: #5e3a4b;
+    letter-spacing: 1px;
+}
+.form .form__fields .form__btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.form .form__fields .form__btns .form__btn{
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: #ffff;
+    color: rgb(71, 70, 70);
+    cursor: pointer;
+    position: relative;
+    margin-top: 28px;
+    text-transform: uppercase;
+}
+
+.form .form__fields .form__btns .form__btn::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 11, 235, 0.4);
+    transition: ease 0.1s;
+    -webkit-transition: ease 0.1s;
+    -moz-transition: ease 0.1s;
+    -ms-transition: ease 0.1s;
+    -o-transition: ease 0.1s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.form .form__fields .form__btns .form__btn:hover::after{
+    width: 100%;
+}
+
+.form .form__fields .auth-input-field,
+.form .form__fields .form__btns{
+    width: 100%;
+    height: 50px;
+    margin: 28px 0;
+}
+.form .form__fields .auth-input-field label{
+    display: block;
+    font-size: 20px;
+    color: #5e3a4b;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+.form .form__fields .auth-input-field input[type="text"],
+.form .form__fields .auth-input-field input[type="email"],
+.form .form__fields .auth-input-field input[type="password"]{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: #ffff;
+    color: #6d6a6a;
+}
+::placeholder{
+    letter-spacing: 1px;
+}
+.form .form__fields .auth-input-field input[type="text"]:focus,
+.form .form__fields .auth-input-field input[type="email"]:focus,
+.form .form__fields .auth-input-field input[type="password"]:focus{
+    box-shadow: -2px 5px 10px #575353;
+}
+
+.form .form__footer{
+    text-align: center;
+}
+.form .form__footer a{
+    text-decoration: none;
+    font-size: 17px;
+}
+.form .form__footer a:hover{
+    text-decoration: underline;
+}
+
+.login{
+    width: 700px;
+    height: 400px;
+}

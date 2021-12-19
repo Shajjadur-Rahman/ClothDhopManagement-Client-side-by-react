@@ -1,0 +1,394 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+@import url("https://cdn.syncfusion.com/ej2/material.css");  /* datetime picker "https://www.npmjs.com/package/@syncfusion/ej2-react-calendars" */
+body{
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* ==============================Createing PDF===================================================*/
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+
+
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+
+  }
+
+  #section-to-print {
+    position: fixed;
+    left: 0;
+
+  }
+
+  #section-to-print .cart__view{
+    margin-top: 20px;
+  }
+  #section-to-print .data-table thead{
+    margin-bottom: 1000px;
+  }
+  #section-to-print .data-table th,
+  #section-to-print .data-table td{
+    color: #000;
+    font-size: 18px;
+  }
+  #section-to-print .data-table td{
+    background: #fff;
+  }
+  #section-to-print .cart_btn,
+  #section-to-print .create_retport{
+    display: none;
+  }
+}
+/* ================================Createing PDF end from here=================================================*/
+
+
+/* ================================Search section start from here=================================================*/
+
+.search__wapper{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.search__wapper .search__div{
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Only year select custom css */
+.search__wapper .search__div input[type='text']{
+  border: none;
+  border-bottom: 1px solid #0b1f37;
+  display: block;
+  width: 250px;
+  padding: 0 20px;
+  margin-right: 10px;
+}
+.search__wapper .show__all{
+  display: block;
+  outline: none;
+  border: none;
+  background: rgba(31, 84, 100, 0.8);
+  padding: 6px 20px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  letter-spacing: 3px;
+}
+.search__wapper .show__all:hover{
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+}
+.search__wapper input[type='search']{
+  background-color: #dddbdb;
+  display: block;
+  padding: 5px 10px;
+  padding-right: 30px;
+  font-size: 16px;
+  width: 280px;
+  border: none;
+  color: #000;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+}
+
+.search__wapper input[type='search']:focus{
+  background-color: #fff;
+  outline: none;
+}
+
+
+.search__wapper .icon__button{
+  position: absolute;
+  border: none;
+  outline: none;
+  background: transparent;
+  top: 6px;
+  right: 5px;
+
+}
+
+.search__wapper .icon__button i{
+  font-size: 18px;
+  cursor: pointer;
+  color: rgb(122, 116, 116);
+  
+}
+
+/* ================================Search section end from here=================================================*/
+
+
+
+
+/* data-table css start from here */
+.page-header{
+  text-align: left;
+  padding: 40px 0;
+  width: 400px;
+  margin: auto;
+}
+.page-header > h2 span,
+.page-header > h3 span {
+  color: orangered;
+}
+.page-header strong{
+  color: #525353;
+}
+.page-header h2,
+.page-header h3{
+  position: relative;
+  margin-bottom: 10px;
+  color: #525353;
+}
+
+.data-table{
+  min-width: 1650px;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.data-table tr:nth-child(even){background-color: #dad5d5;}
+.data-table tr,
+.data-table th,
+.data-table td{
+  border: 1px solid rgba(189, 186, 186, 0.6);
+}
+.data-table tr th{
+  padding: 10px 0;
+  background:rgba(122, 183, 202, 0.6);
+  color: rgb(90, 90, 90);
+  position: sticky;
+  top: 0;
+  z-index:100;
+}
+.data-table tr td{
+  padding-left: 5px;
+  color: #525353;
+}
+
+.action--btn{
+  display: block;
+  margin: 6px auto;
+  border-radius:3px;
+  width: 80px;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:18px;
+  padding:6px 10px;
+  text-decoration:none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.action--btn a{
+  color: #fff;
+}
+.btn--info{
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
+  background: linear-gradient(to bottom, #3d4f6f 5%, #0b1f37 100%);
+  background-color:#7892c2;
+  text-shadow:0px 1px 0px #283966;
+  font-size: 15px;
+}
+.btn--info:hover{
+  background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+background-color:#476e9e;
+}
+.btn--warning{
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+  background: linear-gradient(to bottom, #ff3f05 5%, #331306 100%);
+  background-color:#d0451b;
+  text-shadow:0px 1px 0px #854629;
+  color: #fff;
+  font-size: 15px;
+}
+.btn--warning:hover{
+  background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  background-color:#bc3315;
+}
+.btn--success{
+  box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  background: linear-gradient(to bottom, #2c76ca 5%, #122037 100%);
+  background-color:#3d94f6;
+  text-shadow:0px 1px 0px #1570cd;
+  font-size: 15px;
+
+}
+.btn--success:hover{
+  background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  background-color:#1e62d0;
+}
+.data-table tr td .product-image{
+  width:100px;
+  height:120px;
+  display: block;
+  margin: auto;
+}
+.data-table tr td img{
+  width: 100%;
+  height: 100%;
+}
+/* data-table css end from here */
+
+/* Custom form start from here */
+.custom-form{
+  width: 70%;
+  margin: auto;
+}
+.form--input--wrapper{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/* Custome button */
+.custom--btn {
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 18px;
+  padding: 6px 10px;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  color: #ffffff;
+  background: gray;
+}
+
+.custom--btn:hover{
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  box-shadow: 5px 5px 5px #000;
+}
+
+.form--input{
+  width: 100%;
+  padding: 5px;
+  margin: 10px 15px;
+  
+}
+.form--input input,
+.form--input input[type="text"],
+.form--input input[type="email"],
+.form--input input[type="password"],
+.form--input input[type="number"],
+.form--input input[type="file"],
+.form--input select,
+.form--input .textarea{
+  all: unset;
+  width: 100%;
+  font-size: 17px;
+  padding: 6px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: rgba(217, 217, 217, 0.5);
+  color: #525353;
+  resize: none;
+}
+
+.form--input input:focus,
+.form--input input[type="text"]:focus,
+.form--input input[type="email"]:focus,
+.form--input input[type="password"]:focus,
+.form--input input[type="number"]:focus,
+.form--input input[type="file"]:focus,
+.form--input .textarea:focus{
+  background: #fff;
+  box-shadow: -3px 5px 10px #000;
+}
+
+
+.form--input label{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.form--footer{
+  width: 20%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.form--footer button{
+  padding: 6px 10px;
+  font-size: 17px;
+  width: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #fff;
+}
+.form--footer .submit{
+  background-color:#0b5c84;
+}
+.form--footer .back{
+  background-color:#e36a2f
+}
+.form--footer button:hover{
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  box-shadow: 5px 5px 5px #000;
+}
+
+/* Custom form end from here */
+
+
+
+@media(max-width: 1024px){
+  .page-header h2{
+    font-size: 20px;
+  }
+  .page-header strong{
+    font-size: 14px;
+  }
+}
